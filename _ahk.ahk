@@ -1,0 +1,25 @@
+:*:xs01::col-xs-1
+:*:xs2::col-xs-2
+:*:xs3::col-xs-3
+:*:xs4::col-xs-4
+:*:xs5::col-xs-5
+:*:xs6::col-xs-6
+:*:xs7::col-xs-7
+:*:xs8::col-xs-8
+:*:xs9::col-xs-9
+:*:xs10::col-xs-10
+:*:xs11::col-xs-11
+:*:xs12::col-xs-12
+:*:md01::col-md-1 
+:*:md2::col-md-2 
+:*:md3::col-md-3 
+:*:md4::col-md-4
+:*:md5::col-md-5
+:*:md6::col-md-6
+:*:md7::col-md-7
+:*:md8::col-md-8
+:*:md9::col-md-9
+:*:md10::col-md-10
+:*:md11::col-md-11
+:*:md12::col-md-12
+:*:scss::<style type="text/css">{enter}</style> {home} {enter} {up}
