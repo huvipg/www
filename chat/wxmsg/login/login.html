@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>聊天登陆</title>
+    <link rel="stylesheet" type="text/css" href="./login.css"/>
+</head>
+<body>
+<div>
+</div>
+<div class="mt70 w432 mar_auto re min_h400">
+  <h1>聊天用户登陆</h1>
+    <form name="form1" id="form1" method="post" action="login.php">
+        <p><input type="text" class="pf_ipt_user" placeholder="请输入账号或邮箱" autocomplete="on" name="username" id="username" tabindex="1"/></p>
+<pp> &nbsp; </pp>
+        <p><input type="password" class="pf_ipt_pass pass_bg_1" placeholder="请输入密码" autocomplete="off" name="password" id="password" tabindex="2"/></p>
+<pp> &nbsp; </pp>
+      <p>
+            <span>
+            <input type="text" name="code" id="code" class="pf_ipt_verify w230"  placeholder="验证码" autocomplete="off" tabindex="3"/>
+            <img src="./code.php" onClick="this.src='./code.php?nocache='+Math.random()" style="vertical-align:middle" class="img">
+        </span>
+       </p>
+        </p>
+        <pp id="jz"> &nbsp; </pp>
+ <!--<p><a href="javascript:void(1)" class="btn_1 w430">登录</a></p> -->
+ <p>
+       </p>
+            <button type="button" id="sub"  class="btn_1 w430">登  陆</button>
+        </p>
+        <p><a href="reg.html">账号注册</a></p>
+    </form>
+</div>
+    <script src="lib\jquery\jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="lib\bootstrap\js\bootstrap.min.js"></script>
+<script src="layer\layer.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+//按回城 等于提交按钮
+//<button type="button" id="sub"  class="btn_1 w430">登  陆</button>
+$("#sub").click(function(){
+  var user=$("#username").val();
+  var pass=$("#password").val();
+  var code=$("#code").val();
+  var alert="";
+
+  if (user=="") {
+  alert="用户名不能为空"
+  }
+  else if (pass=="") {
+  alert="密码不能为空"
+  }
+  else if (code=="") {
+  alert="验证码不能为空"
+  }
+if (alert==""){
+//jquery get方法获取json数据
+  $.get("http://149.28.27.116/wxmsg/login/josn.php?user="+user+"&pass=" +pass+"&code=" +code,function(data,status){
+  		var my= eval("("+data+")");
+      if(my.code=="0"){
+  layer.alert("验证码不正确", {icon: 6});
+      }
+      else if (my.iscode=="0") {
+  layer.alert("用户名或密码有误", {icon: 6});
+}
+  else if (my.httpCode!=="yes") {
+  layer.alert("网络连接失败:"+my.httpCode, {icon: 6});
+  }
+  else if (my.code=="1"&&my.iscode=="1") {
+          $('form').submit();
+
+
+  }
+
+    });
+}
+else {
+  layer.alert(alert, {icon: 6});
+}
+  });
+</script>
+
+
+
+
+</body>
+</html>

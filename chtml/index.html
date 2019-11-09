@@ -1,0 +1,125 @@
+div#myid.myclass
+
+<div id="myid" class="myclass"></div>
+
+div>ul
+
+<div>
+  <ul></ul>
+</div>
+
+div+li
+
+<div></div>
+<l></l>i
+
+div>li>a^li
+<div>
+  <li><a href=""></a></li>
+  <li></li>
+</div>
+
+<div>
+  <li><a href=""></a></li>
+</div>
+<li></li>
+
+ui>li*5
+<ui>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ui>
+
+ui>(li>a)*5
+<ui>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</ui>
+
+ui>li>a*5
+<ui>
+  <li>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+  </li>
+</ui>
+
+ui>li.item$*5
+<ui>
+  <li class="item1"></li>
+  <li class="item2"></li>
+  <li class="item3"></li>
+  <li class="item4"></li>
+  <li class="item5"></li>
+</ui>
+
+ui>li.item$$*4
+<ui>
+  <li class="item01"></li>
+  <li class="item02"></li>
+  <li class="item03"></li>
+  <li class="item04"></li>
+</ui>
+
+ui>li.item$@-*6
+<ui>
+  <li class="item6"></li>
+  <li class="item5"></li>
+  <li class="item4"></li>
+  <li class="item3"></li>
+  <li class="item2"></li>
+  <li class="item1"></li>
+</ui>
+
+ui>li.time$@10*6
+<ui>
+  <li class="time10"></li>
+  <li class="time11"></li>
+  <li class="time12"></li>
+  <li class="time13"></li>
+  <li class="time14"></li>
+  <li class="time15"></li>
+</ui>
+
+ui>li.time$@-10*6
+<ui>
+  <li class="time15"></li>
+  <li class="time14"></li>
+  <li class="time13"></li>
+  <li class="time12"></li>
+  <li class="time11"></li>
+  <li class="time10"></li>
+</ui>
+
+#id1+#id2
+<div id="id1"></div>
+<div id="id2"></div>
+
+.class1+.class2
+<div class="class1"></div>
+<div class="class2"></div>
+
+ul>.time*2 (ul>li.time*2  根据父标签进行判定)
+<ul>
+  <li class="time"></li>
+  <li class="time"></li>
+</ul>
+<img src="http://jd.com" alt="dfdf">
+<img src="" alt="">
+<img src="哈哈哈" alt="">
+
+## p{我是文字内容}
+<p>我是文字内容</p>
+## img[http://www.a.com/logo.gif]
+```html
+<img src="http://www.a.com/logo.gif" alt="">
+```

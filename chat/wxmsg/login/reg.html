@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="./login.css"/>
+</head>
+<body>
+<div>
+</div>
+<div class="mt70 w432 mar_auto re min_h400">
+  <h1>聊天用户注册</h1>
+    <form name="form1" id="form1" method="post" action="reg.php">
+        <p><input type="text" class="pf_ipt_user" placeholder="请输入需要注册邮箱" autocomplete="on" name="email" id="_email" tabindex="1"/></p>
+        <p><input type="text" class="pf_ipt_user" placeholder="请输入需要注册账号" autocomplete="on" name="username" id="_username" tabindex="1"/></p>
+        <p><input type="password" class="pf_ipt_pass pass_bg_1" placeholder="请输入注册的密码" autocomplete="off" name="password" id="_password" tabindex="2"/></p>
+        <p>
+            <span>
+            <input type="text" name="code" id="code" class="pf_ipt_verify w230"  placeholder="验证码" autocomplete="off" tabindex="3"/>
+            <img src="./code.php" onClick="this.src='./code.php?nocache='+Math.random()" style="vertical-align:middle" class="img">
+        </span>
+        </p>
+ <!--<p><a href="javascript:void(0)" class="btn_1 w430">登录</a></p> -->
+ <p>
+            <button  class="btn_1 w430">注  册</button>
+        </p>
+        <p><a href="login.html">账号登陆</a></p>
+    </form>
+</div>
+</body>
+</html>
